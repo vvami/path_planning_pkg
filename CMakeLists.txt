@@ -214,8 +214,8 @@ link_libraries(${OMPL_LIBRARY_DIRS})
 
 add_executable(path_planning_server src/path_planning_server.cpp)
 target_link_libraries(path_planning_server ${catkin_LIBRARIES} ${OMPL_LIBRARIES})
-add_dependencies(path_planning_server test_pkg_gencpp)
+add_dependencies(path_planning_server path_planning_pkg_gencpp)
 
 add_executable(path_planning_client src/path_planning_client.cpp)
 target_link_libraries(path_planning_client ${catkin_LIBRARIES})
-add_dependencies(path_planning_client test_pkg_gencpp)
+add_dependencies(path_planning_client path_planning_pkg_gencpp)
