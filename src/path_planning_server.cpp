@@ -6,7 +6,7 @@
 #include <ompl/geometric/planners/rrt/RRTstar.h>
 #include <cmath>
 #include <visualization_msgs/Marker.h>
-#include "test_pkg/PlanPath.h"
+#include "path_planning_pkg/PlanPath.h"
 #include <vector>
 #include "nav_msgs/Path.h"
 #include "geometry_msgs/PoseStamped.h"
@@ -58,7 +58,7 @@ class Planner
             }
         }
 
-        bool service_callback(test_pkg::PlanPath::Request &req, test_pkg::PlanPath::Response &res)
+        bool service_callback(path_planning_pkg::PlanPath::Request &req, path_planning_pkg::PlanPath::Response &res)
         {
             //measure initial time
             double secs = ros::Time::now().toSec();

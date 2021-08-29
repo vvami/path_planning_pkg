@@ -1,5 +1,5 @@
 #include "ros/ros.h"
-#include "test_pkg/PlanPath.h"
+#include "path_planning_pkg/PlanPath.h"
 #include <cstdlib>
 
 int main(int argc, char **argv)
@@ -12,9 +12,9 @@ int main(int argc, char **argv)
     }
 
     ros::NodeHandle n;
-    ros::ServiceClient client = n.serviceClient<test_pkg::PlanPath>("plan_path");
+    ros::ServiceClient client = n.serviceClient<path_planning_pkg::PlanPath>("plan_path");
 
-    test_pkg::PlanPath srv;
+    path_planning_pkg::PlanPath srv;
     srv.request.start.position.x = atof(argv[1]); 
     srv.request.start.position.y = atof(argv[2]); 
     srv.request.goal.position.x = atof(argv[3]); 
